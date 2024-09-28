@@ -433,13 +433,12 @@ text-align:right;
 .read_link summary{
 position:relative;
 text-align:right;
-top:0.3em;
 }
 
 .read_link details{
 position:relative;
-top:-2em;
 }
+
 
 
 .item_about{}
