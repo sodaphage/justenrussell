@@ -1,0 +1,453 @@
+﻿body
+{
+--background_color:#faf9f6;
+font: 400 15px/1.8 'Exo', 'Arial', sans-serif;
+background-color:var(--background_color);
+}
+
+.main{
+	margin: 0 auto;
+	max-width:1500px;
+	padding: 0;
+	}
+
+.spacer{
+	height:10vh;
+}
+
+/******Top Logo*******/
+.logo_box{
+display:flex;
+justify-content: flex-end;
+text-align:center;
+margin-bottom:10px;
+}
+
+
+
+.logo_box_page{
+position:relative;
+display:flex;
+justify-content: center;
+align-items, flex-end;
+}
+
+.logo_image:hover{
+	transform: scale(1.2);
+	transition: transform 0.5s;
+}
+
+#logo_image_index:hover{
+	transform: scale(1);
+}
+
+.logo_image{
+width:50px;
+}
+
+#top_logo{
+width:100%;
+filter: invert(17%) sepia(7%) saturate(642%) hue-rotate(169deg) brightness(101%) contrast(93%); /*match text color*/
+}
+
+/***************** Footer*****************/
+.copyright_box{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: baseline;
+	margin-top:30px;
+}
+
+.copyright_box_page{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: baseline;
+}
+
+/******Splash Container*******/
+.splash_image_container{
+width: 100%;
+height: 300px;
+display: flex;
+}
+
+.splash_image{
+--s:100px;
+--t:1.05;
+width:38%;
+position: relative;
+transition: transform 0.5s;
+}
+
+.logo_mask{
+	height: 100%;
+    width: auto;
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 30%;
+    mask-size: 30%;
+    -webkit-mask-position: center;
+    mask-position: center;
+	transition: filter 1s;
+}
+
+#splash_img_left{
+	--leftimage:url("../img/fallingapart.png");
+	background-image:var(--leftimage);
+	background-size: cover;
+	background-position: center;
+	clip-path:polygon(0 0, 100% 0, calc(100% - var(--s)) 100%, 0 100%);
+}
+
+#logo_mask_left{
+background-image:var(--leftimage);
+-webkit-mask-image:url("../logos/jr_alien.svg");
+mask-image:url("../logos/jr_alien.svg");
+background-position: center;
+}
+
+
+.splash_image:hover{
+transform: scale(var(--t));
+}
+
+.splash_image:hover .logo_mask{
+    -webkit-filter: hue-rotate(111deg) saturate(200%) contrast(120%) brightness(120%);
+    filter: hue-rotate(111deg) saturate(200%) contrast(120%) brightness(120%);	
+}
+
+
+#splash_img_center{
+	--centerimage:url("../img/macaques.png");
+	background-image:var(--centerimage);
+	background-size: cover;
+	background-position: 80% 50%;
+	margin-left: calc(var(--s) * -1 + 10px);
+	clip-path: polygon(var(--s) 0, 100% 0, calc(100% - var(--s)) 100%, 0 100%);
+	width:41%;
+}
+
+#splash_img_center:hover{
+z-index:2;
+}
+
+
+#logo_mask_center{
+background-image:var(--centerimage);
+-webkit-mask-image:url("../logos/jrbookmystery_halfopen.svg");
+mask-image:url("../logos/jrbookmystery_halfopen.svg");
+background-position: 80% 50%;
+}
+
+#splash_img_right{
+	--rightimage:url("../img/PhageoverOrange.png");
+	background-image:var(--rightimage);
+	background-size: cover;
+	background-position: right;
+	margin-left: calc(var(--s) * -1 + 10px);
+	clip-path: polygon(var(--s) 0, 100% 0, 100% 100%, 0 100%);
+}
+
+
+
+#logo_mask_right{
+background-image:var(--rightimage);
+-webkit-mask-image:url("../logos/jr_hair.svg");
+mask-image:url("../logos/jr_hair.svg");
+background-position: right;
+}
+
+.clickable_link{
+  position:absolute; 
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+  z-index: 1;
+}
+
+.splash_text{
+position: absolute;
+left: var(--s);
+top: -20px;
+z-index:3;
+}
+
+#fiction{
+	left:calc(var(--s) / 2);
+}
+
+.splash_text h2{
+font-weight:900;
+color:var(--background_color);
+text-transform: uppercase;
+margin:revert;
+}
+
+@media screen and (max-width: 1020px){
+	.logo_box {
+			justify-content: center;
+	}
+	.copyright_box{
+			justify-content: center;
+	}
+
+}
+
+@media screen and (max-width: 780px){
+
+	.splash_image_container{
+	width: 90vw;
+	min-width: 300px;
+	height: 80vh;
+	min-height:600px;
+	margin:10px;
+	display:block;
+	}
+
+	.splash_image{
+	--s:100px;
+	--t:1.05;
+	height:38%;
+	width:100%;
+	position: relative;
+	transition: transform 0.5s;
+	}
+
+	#splash_img_left{
+	--leftimage:url("../img/fallingapart.png");
+	background-image:var(--leftimage);
+	background-size: cover;
+	background-position: center;
+	clip-path:polygon(0 0, 100% 0, 100% calc(100% - var(--s)), 0 100%);*/
+	}
+
+	#splash_img_center{
+	--centerimage:url("../img/macaques.png");
+	background-image:var(--centerimage);
+	background-size: cover;
+	background-position: 80% 50%;
+	margin-top: calc(var(--s) * -1 + 10px);
+	margin-left:0;
+	clip-path: polygon(0 var(--s), 100% 0, 100% calc(100% - var(--s)), 0 100%);
+	width:100%;
+	}
+
+	#splash_img_right{
+	--rightimage:url("../img/PhageoverOrange.png");
+	background-image:var(--rightimage);
+	background-size: cover;
+	background-position: right;
+	margin-left: 0;
+	margin-top: calc(var(--s) * -1 + 10px);
+	clip-path: polygon(0 var(--s), 100% 0, 100% 100%, 0 100%);
+	}
+
+	.splash_text{
+	position: absolute;
+	left: var(--s);
+	top: -20px;
+	z-index:3;
+	}
+
+	#fiction{
+		left:calc(var(--s) / 2);
+	}
+
+	#non-fiction{
+	left:calc(var(--s) / 2);
+	Top: calc(var(--s) / 1.5);
+	}
+
+	#professional{
+	left:calc(var(--s) / 2);
+	Top: calc(var(--s) / 1.5);
+	}
+
+	.splash_text h2{
+	font-weight:900;
+	color:var(--background_color);
+	text-transform: uppercase;
+	margin:revert;
+	}
+
+}
+/***************About&BTS Pages**************************/
+.linkbar{
+	position:absolute;
+	right:0;
+	display:flex;
+	justify-content:right;
+	align-items:flex-end;
+	height: 50px;
+}
+
+.linkbar img{
+width:25px;
+height:25px;
+padding:3px;
+}
+.linkbar img:hover{
+	transform: scale(1.2);
+	transition: transform 0.5s;
+	}
+
+.page_image{
+	width:512px;
+	height:512px;
+}
+
+.page_flex{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-content:center;
+	align-items:center;
+	}
+
+.page_text{
+	text-align:justify;
+	text-justify:inter-word;
+	width:512px;
+	margin:20px;
+}
+
+#author_image{
+--authorimage:url("../img/Parismicrobesky.jpg");
+background-image:var(--authorimage);
+background-size: cover;
+background-position: center;
+}
+
+#logo_mask_author{
+	-webkit-mask-size: 30%;
+    mask-size: 30%;
+	background-image:var(--authorimage);
+	-webkit-mask-image:url("../logos/jr_eyes.svg");
+	mask-image:url("../logos/jr_eyes.svg");
+	background-position: center;
+	}
+
+.page_image:hover .logo_mask{
+    -webkit-filter: hue-rotate(111deg) saturate(200%) contrast(120%) brightness(120%);
+    filter: hue-rotate(111deg) saturate(200%) contrast(120%) brightness(120%);	
+}
+
+#antBTS_image{
+--antBTSimage:url("../img/spaceants.jpg");
+background-image:var(--antBTSimage);
+background-size: cover;
+background-position: center;
+}
+
+#logo_mask_antsBTS{
+	-webkit-mask-size: 30%;
+    mask-size: 30%;
+	background-image:var(--antBTSimage);
+	-webkit-mask-image:url("../logos/jr_alien.svg");
+	mask-image:url("../logos/jr_alien.svg");
+	background-position: center;}
+
+#fallingBTS_image{
+--fallingBTSimage:url("../img/fallingapart.png");
+background-image:var(--fallingBTSimage);
+background-size: cover;
+background-position: center;}
+
+#logo_mask_fallingBTS{
+	-webkit-mask-size: 30%;
+    mask-size: 30%;
+	background-image:var(--fallingBTSimage);
+	-webkit-mask-image:url("../logos/jr_hair.svg");
+	mask-image:url("../logos/jr_alien.svg");
+	background-position: center;}
+
+@media screen and (max-width:550px){
+.page_image{
+	width:300px;
+	height:300px;
+}
+.page_text{
+	width:300px;	
+}
+
+}
+
+/*****************Item Grids*******************/
+.item_container{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content:flex-start;
+	align-items:flex-start;
+	align-content:flex-start;
+	margin: 0 auto;
+	max-width:max-content;
+	position:relative;
+}
+
+	@media screen and (max-width: 349px) { width:min-content; }
+	@media screen and (min-width: 350px) and (max-width: 649px) { .item_container{width:350px;}}
+	@media screen and (min-width: 700px) and (max-width: 1049px) { .item_container{width:700px;}}
+	@media screen and (min-width: 1050px) and (max-width: 1399px) { .item_container{width:1050px;}}
+	@media screen and (min-width: 1400px) and (max-width: 1500px) { .item_container{width:1400px;}}
+	
+	
+
+
+.item{
+	display: inline-block;
+	width:300px;
+	object-fit:cover;
+	padding:22px;
+}
+
+.title_item{
+	display: inline-block;
+	width:100%;
+	padding:0px;
+}
+
+.item_thumbnail{
+	position:relative;
+	width:300px;
+	height:150px;
+	background-size: cover;
+	background-position: center;
+}
+
+
+.item_title h2{
+margin:5px 0 3px 0;
+font-size: 1.3em;
+font-stretch:semi-condensed;
+line-height:normal;
+text-align:right;
+}
+
+
+.read_link summary{
+position:relative;
+text-align:right;
+top:0.3em;
+}
+
+.read_link details{
+position:relative;
+top:-2em;
+}
+
+
+.item_about{}
+.popover_image{
+	display:inline-block;
+	width:400px;
+}
+.popver_textblock{
+	display:inline-block;
+	width:400px;
+	}
