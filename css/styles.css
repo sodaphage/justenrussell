@@ -264,7 +264,7 @@ margin:revert;
 	Top: calc(var(--s) / 1.5);
 	}
 
-	#professional{
+	#about{
 	left:calc(var(--s) / 2);
 	Top: calc(var(--s) / 1.5);
 	}
@@ -424,6 +424,7 @@ background-position: center;}
 .item_title h2{
 margin:5px 0 3px 0;
 font-size: 1.3em;
+font-stretch:condensed;
 font-stretch:semi-condensed;
 line-height:normal;
 text-align:right;
