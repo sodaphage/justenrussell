@@ -420,8 +420,16 @@ background-position: center;}
 	background-position: center;
 }
 
+.item_title{
+	min-height:50px;
+	display:flex;
+	justify-content: flex-end;
+
+}
+
 
 .item_title h2{
+align-self: flex-end;
 margin:5px 0 3px 0;
 font-size: 1.3em;
 font-stretch:condensed;
